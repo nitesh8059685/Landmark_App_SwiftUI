@@ -9,7 +9,16 @@ import SwiftUI
 
 struct LandmarkListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            List(landmarks) { landmark in
+                NavigationLink(destination: LandmarkDetail(landmark: landmark))
+                {
+                    LandmarkRow(landmark: landmark)
+                }
+            }
+            .navigationTitle("Landmarks")
+        }
+        
     }
 }
 

@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct CircleImage: View {
+    var image: Image
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        image
+            .clipShape(Circle())
+            .overlay(Circle().stroke(Color.white))
+            .shadow(radius: 7)
+    }    }
 
-#Preview {
-    CircleImage()
+
+struct CircleImage_Previews: PreviewProvider {
+    static var previews: some View {
+        CircleImage(image: Image("svp"))
+    }
 }
