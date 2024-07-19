@@ -14,11 +14,11 @@ struct CircleImage: View {
             .clipShape(Circle())
             .overlay(Circle().stroke(Color.white))
             .shadow(radius: 7)
-    }    }
-
-
-struct CircleImage_Previews: PreviewProvider {
-    static var previews: some View {
-        CircleImage(image: Image("svp"))
     }
 }
+
+
+#Preview {
+    CircleImage(image: Image("svp"))
+}
+
